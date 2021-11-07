@@ -5,7 +5,7 @@ from setuptools import setup
 
 ROOT = pathlib.Path(__file__).parent
 
-with open('ferrischat_cli/__init__.py', 'r') as f:
+with open('terris/__init__.py', 'r') as f:
     content = f.read()
     try:
         version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', content, re.MULTILINE).group(1)  # type: ignore
@@ -28,14 +28,14 @@ with open(ROOT / 'requirements.txt', encoding='utf-8') as f:
     requirements = f.readlines()
 
 setup(
-    name="ferrischat-cli",
+    name="terris",
     author=author,
-    url="https://github.com/Cryptex-github/ferrischat-cli",
+    url="https://github.com/FerrisChat/terris",
     project_urls={
-        "Issue tracker": "https://github.com/Cryptex-github/ferrischat-cli/issues/new",
+        "Issue tracker": "https://github.com/FerrisChat/terris/issues/new",
     },
     version=version,
-    packages=["ferrischat_cli"],
+    packages=["terris"],
     license="EUPL v1.2",
     description="A CLI Client for FerrisChat using FerrisWheel",
     long_description=readme,
