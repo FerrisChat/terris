@@ -35,5 +35,9 @@ async def on_ready():
     guilds = (await client.fetch_user(client.user.id)).guilds
     await guild_select(guilds)
 
-client.run(email=email, password=password)
-
+try:
+    client.run(email=email, password=password)
+except ferris.errors.NotFound:
+    print(f"{Fore.RED}Incorrect email.{Fore.RESET}")
+except ferris.errors.Unauthorized:
+    print(f"{Fore.RED}Incorrect password.{Fore.RESET}")
