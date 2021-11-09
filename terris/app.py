@@ -10,8 +10,8 @@ cls()
 print(Fore.RED, "Terris", Fore.RESET)
 print(Back.RED, Fore.BLACK, "This is a secure connection to the FerrisChat Servers using the official 'ferriswheel' library.", Fore.RESET, Back.RESET)
 
-email = input(f"{Fore.BLUE}What is you email > {Fore.RESET}")
-password = input(f"{Fore.BLUE}What is you password > {Fore.RESET}")
+email = input(f"{Fore.BLUE}Enter email > {Fore.RESET}")
+password = input(f"{Fore.BLUE}Enter password > {Fore.RESET}")
 
 
 guilds=None
