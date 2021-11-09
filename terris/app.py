@@ -45,5 +45,9 @@ async def on_ready():
     e = await guild_select(guilds)
     await channel_select(e)
 
-client.run(email=email, password=password)
-
+try:
+    client.run(email=email, password=password)
+except ferris.errors.NotFound:
+    print(f"{Fore.RED}Incorrect email.{Fore.RESET}")
+except ferris.errors.Unauthorized:
+    print(f"{Fore.RED}Incorrect password.{Fore.RESET}")
