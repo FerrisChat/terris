@@ -1,3 +1,3 @@
-ferriswheel
+git+https://github.com/FerrisChat/ferriswheel
 colorama~=0.4.4
 setuptools~=58.0.3
