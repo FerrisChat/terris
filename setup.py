@@ -58,4 +58,7 @@ setup(
         'Topic :: Utilities',
         'Typing :: Typed',
     ],
+    entry_points = {
+        'console_scripts': ['terris=terris.app:run_cmd'],
+    }
 )
